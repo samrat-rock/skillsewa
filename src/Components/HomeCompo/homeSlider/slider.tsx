@@ -1,8 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const images = [
-  '/image1.jpg', 
+  '/image1.jpg',
   '/image2.jpg',
 ];
 
@@ -12,7 +13,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); 
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -25,23 +26,26 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl shadow-lg py-3">
-      <img
+    <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl shadow-lg py-3 h-80">
+      <Image
         src={images[current]}
         alt={`slide-${current}`}
-        className="w-full h-80 object-cover transition-opacity duration-700"
+        layout="fill"
+        objectFit="cover"
+        priority
+        className="transition-opacity duration-700"
       />
 
-      
+      {/* Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
       >
         ‹
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
       >
         ›
       </button>

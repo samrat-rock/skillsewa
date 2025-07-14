@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -12,10 +13,12 @@ const About = () => {
             key={index}
             className="bg-white rounded-2xl overflow-hidden shadow-lg transform transition ease-in-out duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            <img
+            <Image
               src={`/profile${index + 1}.jpg`} 
               alt={`Profile ${index + 1}`}
-              className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover"
+                width={500}
+                height={300}
             />
             <div className="p-6">
               <h2 className="text-2xl font-semibold text-gray-800 mb-2">Samrat Pandey</h2>
