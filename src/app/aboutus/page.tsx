@@ -1,14 +1,8 @@
-
-import Home from '@/Components/HomeCompo/layout'
 import React from 'react'
 
 const page = () => {
   return (
-    <>
-
-  <Home/>
-        
-    </>
+    <div>This is about us page</div>
   )
 }
 
