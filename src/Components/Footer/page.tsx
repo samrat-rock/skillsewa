@@ -22,7 +22,7 @@ const page = () => {
   return (
     <footer className="bg-[#1c2541] text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* Left Column */}
+        
         <div>
           <div className="flex items-center space-x-3 mb-4">
             <Image src="/avatar.png" alt="Logo" className="w-10 h-10 rounded-full"
@@ -46,7 +46,7 @@ const page = () => {
           ></iframe>
         </div>
 
-        {/* Center Column */}
+        
         <div>
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <div className="grid grid-cols-2 gap-3 text-gray-300">
@@ -88,7 +88,7 @@ const page = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+    
         <div>
           <h3 className="text-xl font-semibold mb-2">What&apos;s New</h3>
           <p className="text-gray-300 mb-4">

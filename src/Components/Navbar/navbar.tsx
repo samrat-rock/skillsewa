@@ -28,7 +28,9 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Gallery Dropdown */}
+          
+
+          
           <div className="relative group">
             <button
               onClick={() => setGalleryOpen(!galleryOpen)}
@@ -37,7 +39,10 @@ const Navbar = () => {
               Gallery <ChevronDown size={16} />
             </button>
 
-            {/* Dropdown Content */}
+          
+
+
+
             {galleryOpen && (
               <div className="absolute top-full mt-2 bg-white border border-blue-100 rounded-md shadow-xl w-44 animate-fade-in-down">
                 {[

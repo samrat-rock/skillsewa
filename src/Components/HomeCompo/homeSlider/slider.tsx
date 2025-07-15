@@ -36,7 +36,7 @@ const Slider = () => {
         className="transition-opacity duration-700"
       />
 
-      {/* Buttons */}
+      
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
