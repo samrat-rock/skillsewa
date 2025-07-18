@@ -1,0 +1,32 @@
+// Remove duplicate model definition
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Only one Admin model definition
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("admins")
+}
+
+model AboutSection {
+  id      Int     @id @default(autoincrement())
+  title   String
+  content String
+  image   String
+  order   Int     @unique
+
+  @@map("about_sections")
+}
